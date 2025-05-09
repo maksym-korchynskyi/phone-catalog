@@ -62,7 +62,9 @@ export const CartItem = React.forwardRef<HTMLElement, Props>(function CartItem(
           />
         </Link>
 
-        <div className={styles['cart-item__title']}>{name}</div>
+        <Link to={link} className={styles['cart-item__title']}>
+          {name}
+        </Link>
       </div>
 
       <div className={styles['cart-item__bottom']}>

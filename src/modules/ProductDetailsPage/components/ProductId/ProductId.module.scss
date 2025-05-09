@@ -2,17 +2,18 @@
 @use '@styles/extends' as *;
 
 .product-id {
+  position: absolute;
   top: 0;
   right: 0;
-  position: absolute;
   color: var(--color-icons);
 
   @include small-text;
 
   &--loading {
-    height: 1em;
-    width: 30px;
 
     @extend %skeleton;
+
+    width: 30px;
+    height: 1em;
   }
 }

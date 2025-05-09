@@ -7,15 +7,12 @@
 @use '@styles/typography' as *;
 
 .hidden {
+  pointer-events: none;
   position: absolute;
   visibility: hidden;
-  pointer-events: none;
 }
 
 .page {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
   --color-primary: #313237;
   --color-secondary: #89939a;
   --color-icons: #b4bdc3;
@@ -25,18 +22,12 @@
   --color-green: #27ae60;
   --color-red: #eb5757;
 
-  background-color: var(--color-white);
-
   // grid columns count
   --columns: #{$columns-p};
 
-  @include on-tablet {
-    --columns: #{$columns-t};
-  }
-
-  @include on-desktop {
-    --columns: #{$columns-d};
-  }
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--color-white);
 
   &--dark {
     --color-primary: #f1f2f9;
@@ -52,5 +43,13 @@
     --color-red: #eb5757;
 
     background-color: var(--color-black);
+  }
+
+  @include on-tablet {
+    --columns: #{$columns-t};
+  }
+
+  @include on-desktop {
+    --columns: #{$columns-d};
   }
 }

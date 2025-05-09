@@ -22,7 +22,7 @@ export const Logo: React.FC<Props> = ({ className, footer = false }) => {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       <img
-        src={theme === Theme.dark ? './img/logo-dark.png' : './img/logo.png'}
+        src={theme === Theme.dark ? './img/logo-dark.webp' : './img/logo.webp'}
         alt="logo"
         className={classNames(styles.logo__image, {
           [styles['logo__image--footer']]: footer,

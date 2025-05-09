@@ -1,17 +1,16 @@
 .loader {
   display: flex;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 
   &__content {
     width: 2em;
     height: 2em;
     margin: 1em auto;
-
-    border-radius: 50%;
     border: 0.3em solid #ddd;
     border-left-color: #000;
+    border-radius: 50%;
 
     animation: load 1.2s infinite linear;
   }

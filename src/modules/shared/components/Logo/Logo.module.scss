@@ -2,8 +2,8 @@
 
 .logo {
   display: flex;
-  width: fit-content;
   align-items: center;
+  width: fit-content;
 
   @include on-desktop {
     @include hover;

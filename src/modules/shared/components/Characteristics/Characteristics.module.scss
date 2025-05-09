@@ -1,10 +1,9 @@
 @use '@styles/mixins' as *;
 
 .characteristics {
-  gap: 8px;
   display: flex;
   flex-direction: column;
-
+  gap: 8px;
   padding-block: 8px;
 
   @include small-text;
@@ -18,18 +17,18 @@
   }
 
   &__characteristic {
-    gap: 16px;
     display: flex;
+    gap: 16px;
     justify-content: space-between;
   }
 
   &__key {
-    text-align: left;
     color: var(--color-secondary);
+    text-align: left;
   }
 
   &__value {
-    text-align: right;
     color: var(--color-primary);
+    text-align: right;
   }
 }

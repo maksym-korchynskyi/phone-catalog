@@ -1,13 +1,13 @@
 .price {
-  gap: 8px;
   display: flex;
+  gap: 8px;
   align-items: center;
 
   &__full {
+    font-family: Mont, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 29px;
-    font-family: Mont, sans-serif;
     color: var(--color-secondary);
   }
 }

@@ -6,9 +6,9 @@
   @include uppercase;
 
   &__items {
-    gap: 16px;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    gap: 16px;
+    align-items: center;
   }
 }

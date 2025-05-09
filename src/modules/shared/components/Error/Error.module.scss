@@ -1,33 +1,33 @@
 @use '@styles/mixins' as *;
 
 .error {
-  height: 75px;
-  box-sizing: border-box;
-  border: 1px solid var(--color-primary);
-
-  padding: 8px;
-
-  @include body-text;
-
-  gap: 4px;
   display: flex;
-  text-align: center;
+  gap: 4px;
   align-items: center;
   justify-content: center;
 
+  box-sizing: border-box;
+  height: 75px;
+  padding: 8px;
+  border: 1px solid var(--color-primary);
+
+  text-align: center;
+
+  @include body-text;
+
   &__icon {
-    height: 60%;
-    aspect-ratio: 1;
-    box-sizing: border-box;
-
-    font-size: 2em;
-    line-height: 2em;
-    color: var(--color-secondary);
-
     cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    height: 60%;
+
+    font-size: 2em;
+    line-height: 2em;
+    color: var(--color-secondary);
   }
 }

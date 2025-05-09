@@ -2,10 +2,10 @@
 @use '@styles/mixins' as *;
 
 .categories {
-  gap: 24px;
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
+  gap: 24px;
 
   &__header {
     display: flex;

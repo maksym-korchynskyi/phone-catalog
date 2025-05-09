@@ -2,19 +2,20 @@
 @use '@styles/mixins' as *;
 
 .header {
-  padding-left: 8px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+
   height: $header-height-p;
+  padding-left: 8px;
+
   background-color: var(--color-white);
   box-shadow: 0 $header-bottom-shadow 0 0 var(--color-elements);
 
-  gap: 16px;
-  display: flex;
-  justify-content: space-between;
-
   @include on-desktop {
     gap: 24px;
-    padding-left: 24px;
     height: $header-height-d;
+    padding-left: 24px;
   }
 
   &--dark {
@@ -23,8 +24,8 @@
   }
 
   &__left {
-    gap: 32px;
     display: flex;
+    gap: 32px;
 
     @include on-desktop {
       gap: 48px;
@@ -41,8 +42,8 @@
   }
 
   &__right {
-    gap: 16px;
     display: flex;
+    gap: 16px;
 
     @include on-desktop {
       gap: 24px;

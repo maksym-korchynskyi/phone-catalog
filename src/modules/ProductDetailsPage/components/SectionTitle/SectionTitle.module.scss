@@ -1,7 +1,7 @@
 .section-title {
-  gap: 16px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 
   &__hr {
     border: 1px solid var(--color-elements);

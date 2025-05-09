@@ -64,7 +64,7 @@ export const CartPage = () => {
 
         {!hasContent && (
           <Image
-            src="./img/cart-is-empty.png"
+            src="./img/cart-is-empty.webp"
             className={classNames(
               styles['cart-page__message'],
               styles['cart-page__message--image'],

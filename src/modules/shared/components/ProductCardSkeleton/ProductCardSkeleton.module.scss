@@ -3,52 +3,56 @@
 @use '@styles/extends' as *;
 
 .product-card-skeleton {
-  padding: 32px;
-  box-sizing: border-box;
-  border: 1px solid var(--color-elements);
-
-  gap: 8px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+
+  box-sizing: border-box;
+  padding: 32px;
+  border: 1px solid var(--color-elements);
 
   &__image {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: contain;
-    margin-bottom: 16px;
 
     @extend %skeleton;
+
+    aspect-ratio: 1;
+    width: 100%;
+    margin-bottom: 16px;
+    object-fit: contain;
   }
 
   &__title {
+    @extend %skeleton;
+
     margin-bottom: auto;
 
     @include body-text;
-    @extend %skeleton;
   }
 
   &__price {
-    gap: 8px;
     display: flex;
+    gap: 8px;
     align-items: center;
   }
 
   &__curr-price {
-    width: 30%;
 
     @extend %skeleton;
+
+    width: 30%;
   }
 
   &__prev-price {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 29px;
-    font-family: Mont, sans-serif;
-    color: var(--color-secondary);
+
+    @extend %skeleton;
 
     width: 30%;
 
-    @extend %skeleton;
+    font-family: Mont, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+    color: var(--color-secondary);
   }
 
   &__divider {
@@ -56,15 +60,17 @@
   }
 
   &__characteristic {
-    display: flex;
-    justify-content: space-between;
 
     @extend %skeleton;
+
+    display: flex;
+    justify-content: space-between;
   }
 
   &__add-to-card {
-    height: $add-to-card-height;
 
     @extend %skeleton;
+
+    height: $add-to-card-height;
   }
 }

@@ -12,7 +12,9 @@ export const PageNotFound = () => {
       <div className={styles['not-found-page__content']}>
         <img
           src={
-            product ? './img/product-not-found.png' : './img/page-not-found.png'
+            product
+              ? './img/product-not-found.webp'
+              : './img/page-not-found.webp'
           }
           className={styles['not-found-page__image']}
         />

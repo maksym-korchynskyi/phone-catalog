@@ -56,7 +56,7 @@ export const Image = React.forwardRef<RefType, Props>(
             }
           }}
           onError={() => {
-            setSrc('./img/page-not-found.png');
+            setSrc('./img/page-not-found.webp');
           }}
           style={!isLoading ? props.style : { display: 'none' }}
         />

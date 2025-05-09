@@ -53,6 +53,8 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 
   return (
     <input
+      id="query"
+      name="query"
       type="search"
       placeholder="Enter the product name..."
       className={classNames(className, styles['search-input'], {

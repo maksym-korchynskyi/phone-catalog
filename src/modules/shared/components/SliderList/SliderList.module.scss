@@ -17,17 +17,16 @@ $gaps-t: ($size-t - 1) * $column-gap-p;
 $gaps-d: ($size-d - 1) * $column-gap-p;
 
 .slider-list {
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: $column-gap-p;
-
   overflow: auto hidden;
-
-  margin-inline: -$padding-inline-p;
-  padding-inline: $padding-inline-p;
+  display: grid;
   grid-auto-columns: calc(
     (100vw - #{$phone}) * #{$size-p} / #{$columns-p} + #{$gaps-p}
   );
+  grid-auto-flow: column;
+  column-gap: $column-gap-p;
+
+  margin-inline: -$padding-inline-p;
+  padding-inline: $padding-inline-p;
 
   @include hide-scrollbar;
 
@@ -36,18 +35,18 @@ $gaps-d: ($size-d - 1) * $column-gap-p;
   }
 
   @include on-tablet {
-    margin-inline: -$padding-inline-t;
-    padding-inline: $padding-inline-t;
     grid-auto-columns: calc(
       (100vw - #{$tablet}) * #{$size-t} / #{$columns-t} + #{$gaps-t}
     );
+    margin-inline: -$padding-inline-t;
+    padding-inline: $padding-inline-t;
   }
 
   @include on-desktop {
-    margin-inline: 0;
-    padding-inline: 0;
     grid-auto-columns: calc(
       ($desktop-min-width - #{$desktop}) * #{$size-d} / #{$columns-d} + #{$gaps-d}
     );
+    margin-inline: 0;
+    padding-inline: 0;
   }
 }

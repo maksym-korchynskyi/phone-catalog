@@ -19,14 +19,14 @@ export const Categories = () => {
     {
       bgColor: '#8D8D92',
       title: 'Tablets',
-      img: './img/category-tablets.png',
+      img: './img/category-tablets.webp',
       amount: products.tablets.length,
       url: './tablets',
     },
     {
       bgColor: '#D53C51',
       title: 'Accessories',
-      img: './img/category-accessories.png',
+      img: './img/category-accessories.webp',
       amount: products.accessories.length,
       url: './accessories',
     },

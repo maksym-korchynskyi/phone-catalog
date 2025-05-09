@@ -1,9 +1,9 @@
 @use '@styles/mixins' as *;
 
 .available-products {
-  gap: 8px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 
   &__title {
     color: var(--color-secondary);
@@ -12,7 +12,7 @@
   }
 
   &__content {
-    gap: 8px;
     display: flex;
+    gap: 8px;
   }
 }

@@ -4,9 +4,9 @@
 .home-page {
   &__content {
     display: flex;
+    flex-direction: column;
     gap: $row-gap-p;
     margin-top: $row-gap-p;
-    flex-direction: column;
 
     @include on-tablet {
       gap: $row-gap-t;

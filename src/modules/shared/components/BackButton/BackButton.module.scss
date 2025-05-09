@@ -1,12 +1,14 @@
 @use '@styles/mixins' as *;
 
 .back-button {
-  gap: 4px;
+  cursor: pointer;
+
   display: flex;
+  gap: 4px;
   align-items: center;
 
-  cursor: pointer;
   width: fit-content;
+
   color: var(--color-secondary);
 
   @include small-text;

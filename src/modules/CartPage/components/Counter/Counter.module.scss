@@ -7,23 +7,25 @@
 
   &__value,
   &__wrapper {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    height: 32px;
     aspect-ratio: 1;
-    position: relative;
+    height: 32px;
   }
 
   &__count {
     @include body-text;
 
     &--skeleton {
-      width: 20px;
-      height: 20px;
 
       @extend %skeleton;
+
+      width: 20px;
+      height: 20px;
     }
   }
 }

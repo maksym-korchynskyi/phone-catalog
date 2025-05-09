@@ -6,14 +6,14 @@
 
   @include on-desktop {
     display: grid;
-    gap: $column-gap-p;
     grid-template-columns: repeat(11, 1fr);
+    gap: $column-gap-p;
   }
 
   &__content {
-    gap: 32px;
     display: flex;
     flex-direction: column;
+    gap: 32px;
 
     @include on-desktop {
       grid-column: 1 / 8;
@@ -21,9 +21,9 @@
   }
 
   &__other-models {
-    gap: 24px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
   }
 
   &__hr {
@@ -31,8 +31,8 @@
   }
 
   &__price {
-    gap: 16px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
   }
 }

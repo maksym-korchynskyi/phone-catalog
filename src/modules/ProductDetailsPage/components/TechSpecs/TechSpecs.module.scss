@@ -1,9 +1,9 @@
 @use '@styles/mixins' as *;
 
 .tech-specs {
-  gap: 30px;
   display: flex;
   flex-direction: column;
+  gap: 30px;
 
   @include on-tablet {
     gap: 25px;

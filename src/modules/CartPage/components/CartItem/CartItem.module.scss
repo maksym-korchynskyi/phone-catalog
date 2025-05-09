@@ -4,23 +4,22 @@ $p-column-gap: 16px;
 $t-column-gap: 24px;
 
 .cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: $p-column-gap;
+
   padding: $p-column-gap;
   border: 1px solid var(--color-elements);
 
-  display: flex;
-  gap: $p-column-gap;
-  flex-direction: column;
-
   @include on-tablet {
-    padding: $t-column-gap;
-
-    gap: $t-column-gap;
     flex-direction: row;
+    gap: $t-column-gap;
+    padding: $t-column-gap;
   }
 
   &__top {
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     gap: $p-column-gap;
     align-items: center;
 
@@ -31,9 +30,8 @@ $t-column-gap: 24px;
 
   &__image {
     display: block;
-
-    width: 80px;
     aspect-ratio: 1;
+    width: 80px;
     object-fit: contain;
 
     @include hover;
@@ -42,6 +40,7 @@ $t-column-gap: 24px;
   &__title {
     flex-grow: 1;
 
+    @include hover;
     @include body-text;
   }
 

@@ -3,9 +3,9 @@
 
 .products-count {
   &__header {
-    gap: 8px;
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 
   &__model-count {
@@ -15,18 +15,18 @@
     @include body-text;
 
     &--loading {
-      color: transparent;
 
       @extend %skeleton;
+
+      color: transparent;
     }
   }
 
   &__main {
-    gap: 32px;
-    margin-top: 32px;
-
     display: flex;
     flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
 
     @include on-tablet {
       gap: 40px;

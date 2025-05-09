@@ -14,8 +14,8 @@
 
 @mixin page-grid {
   display: grid;
-  column-gap: $column-gap-p;
   grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: $column-gap-p;
 }
 
 @mixin hover($size: 1.05) {
@@ -30,6 +30,7 @@
 @mixin hide-scrollbar {
   // hide scrollbar
   scrollbar-width: none; /* Firefox */
+
   -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
@@ -45,45 +46,41 @@
   }
 
   @include on-desktop {
-    padding-inline: 0;
-    margin-inline: auto;
     width: $desktop-min-width - 2 * $padding-inline-d;
+    margin-inline: auto;
+    padding-inline: 0;
   }
 }
 
 @mixin uppercase {
   font-family: Mont, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-
   font-size: 12px;
+  font-weight: 700;
   line-height: 11px;
+  text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 @mixin buttons-text {
   font-family: Mont, sans-serif;
-  font-weight: 600;
-
   font-size: 14px;
+  font-weight: 600;
   line-height: 21px;
   letter-spacing: 0;
 }
 
 @mixin body-text {
   font-family: Mont, sans-serif;
-  font-weight: 500;
-
   font-size: 14px;
+  font-weight: 500;
   line-height: 21px;
   letter-spacing: 0;
 }
 
 @mixin small-text {
   font-family: Mont, sans-serif;
-  font-weight: 600;
-
   font-size: 12px;
+  font-weight: 600;
   line-height: 15px;
   letter-spacing: 0;
 }

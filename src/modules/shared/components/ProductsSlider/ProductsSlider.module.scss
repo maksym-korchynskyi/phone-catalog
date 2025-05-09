@@ -1,14 +1,14 @@
 @use '@styles/vars' as *;
 
 .products-slider {
-  gap: 24px;
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
+  gap: 24px;
 
   &__header {
-    gap: 21px;
     display: flex;
+    gap: 21px;
     align-items: center;
     justify-content: space-between;
   }

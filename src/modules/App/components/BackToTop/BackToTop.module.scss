@@ -2,14 +2,16 @@
 @use '@styles/mixins' as *;
 
 .back-to-top {
-  height: 32px;
   cursor: pointer;
   user-select: none;
-  color: var(--color-secondary);
 
-  gap: $column-gap-p;
   display: flex;
+  gap: $column-gap-p;
   align-items: center;
+
+  height: 32px;
+
+  color: var(--color-secondary);
 
   @include on-desktop {
     @include hover;

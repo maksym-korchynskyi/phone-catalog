@@ -12,17 +12,17 @@ import { useDebounce } from '@hooks/useDebounce';
 import { useScrollAnimation } from '@hooks/useScrollAnimation';
 
 const IMAGES = [
-  './img/banner/banner-1.png',
-  './img/banner/banner-2.png',
-  './img/banner/banner-3.png',
-  './img/banner/banner-4.png',
+  './img/banner/banner-1.webp',
+  './img/banner/banner-2.webp',
+  './img/banner/banner-3.webp',
+  './img/banner/banner-4.webp',
 ];
 
 const PHONE_IMAGES = [
-  './img/banner/banner-1-phone.png',
-  './img/banner/banner-2.png',
-  './img/banner/banner-3.png',
-  './img/banner/banner-4.png',
+  './img/banner/banner-1-phone.webp',
+  './img/banner/banner-2.webp',
+  './img/banner/banner-3.webp',
+  './img/banner/banner-4.webp',
 ];
 
 function getImages() {
