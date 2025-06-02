@@ -34,6 +34,7 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
         newParams.delete('query');
       }
 
+      newParams.delete('page');
       setParams(newParams);
     },
     [params, setParams],

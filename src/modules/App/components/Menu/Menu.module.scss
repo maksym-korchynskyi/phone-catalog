@@ -3,12 +3,12 @@
 .menu {
   pointer-events: none;
 
-  position: fixed;
   z-index: 100;
-  inset: $header-height-p + $header-bottom-shadow 0 0 0;
-  transform: translateX(100%);
+  position: fixed;
+  inset: $header-height-p + $header-bottom-shadow - 0.2px 0 0 0;
 
   opacity: 0;
+  transform: translateX(100%);
   background-color: var(--color-white);
 
   transition:

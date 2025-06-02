@@ -115,7 +115,7 @@ export const ProductsPage = () => {
   const [page, itemsCount, pagesCount] = getPaginationData(
     initialPage,
     itemsPerPage,
-    categoryProducts.length,
+    sortedProducts.length,
   );
 
   useEffect(() => {
@@ -201,7 +201,7 @@ export const ProductsPage = () => {
         />
       )}
 
-      {itemsPerPage !== ItemsPerPage.all && (
+      {!!sortedProducts.length && itemsPerPage !== ItemsPerPage.all && (
         <ProductsNavigation page={page} pagesCount={pagesCount} />
       )}
     </ProductsCount>
