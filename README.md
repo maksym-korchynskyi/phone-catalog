@@ -4,7 +4,7 @@ This project is a modern e-commerce platform designed to help users easily disco
 
 ## Live Demo
 
-Experience the live website: [Phone Catalog](https://maksym2493.github.io/phone-catalog/)
+Experience the live website: [Phone Catalog](https://maksym-korchynskyi.github.io/phone-catalog/)
 
 ## Design Reference
 
