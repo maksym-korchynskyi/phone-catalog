@@ -23,11 +23,13 @@ export const AddToCard: React.FC<Props> = ({
 }) => {
   const dispatch = useAppDispatch();
 
-  const favorites = useAppSelector(state => state.favorites);
-  const shoppingCart = useAppSelector(state => state.cart.itemIds);
+  const isInFavorite = useAppSelector(state =>
+    state.favorites.includes(itemId),
+  );
 
-  const isInFavorite = favorites.includes(itemId);
-  const isInShoppingCard = shoppingCart[itemId] !== undefined;
+  const isInShoppingCard = useAppSelector(
+    state => state.cart.itemIds[itemId] !== undefined,
+  );
 
   return (
     <div className={styles['add-to-card']}>

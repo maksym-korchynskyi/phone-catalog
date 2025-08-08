@@ -17,8 +17,11 @@ type Props = {
   onRemoveFromFavorite?: () => void;
 };
 
-export const ProductCard = React.forwardRef<HTMLElement, Props>(
-  function ProductCard({ product, hidePrevPrice, onRemoveFromFavorite }, ref) {
+export const ProductCard = React.memo(
+  React.forwardRef<HTMLElement, Props>(function ProductCard(
+    { product, hidePrevPrice, onRemoveFromFavorite },
+    ref,
+  ) {
     const navigation = useNavigate();
     const { price, fullPrice, screen, capacity, ram, image } = product;
 
@@ -63,5 +66,5 @@ export const ProductCard = React.forwardRef<HTMLElement, Props>(
         />
       </article>
     );
-  },
+  }),
 );

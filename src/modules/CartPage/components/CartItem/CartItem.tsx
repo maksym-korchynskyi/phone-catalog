@@ -23,67 +23,69 @@ type Props = {
   onRemoveFromCart?: () => void;
 };
 
-export const CartItem = React.forwardRef<HTMLElement, Props>(function CartItem(
-  {
-    name,
-    image,
-    count,
-    price,
-    itemId,
+export const CartItem = React.memo(
+  React.forwardRef<HTMLElement, Props>(function CartItem(
+    {
+      name,
+      image,
+      count,
+      price,
+      itemId,
 
-    link,
-    onRemoveFromCart = () => {},
-  },
-  ref,
-) {
-  const dispatch = useAppDispatch();
+      link,
+      onRemoveFromCart = () => {},
+    },
+    ref,
+  ) {
+    const dispatch = useAppDispatch();
 
-  return (
-    <article aria-label={name} ref={ref} className={styles['cart-item']}>
-      <div className={styles['cart-item__top']}>
-        <IconButton
-          type={IconButtonType.iconClose}
-          small
-          secondary
-          hideBorders
-          hideBackground
-          onClick={() => {
-            onRemoveFromCart();
-            dispatch(toggle(itemId));
-          }}
-          ariaLabel="Close"
-        />
-
-        <Link to={link}>
-          <Image
-            src={image}
-            aria-label={name}
-            className={styles['cart-item__image']}
-          />
-        </Link>
-
-        <Link to={link} className={styles['cart-item__title']}>
-          {name}
-        </Link>
-      </div>
-
-      <div className={styles['cart-item__bottom']}>
-        <Counter
-          count={count}
-          onAdd={() => {
-            dispatch(add(itemId));
-          }}
-          onTake={() => {
-            if (count === 1) {
+    return (
+      <article aria-label={name} ref={ref} className={styles['cart-item']}>
+        <div className={styles['cart-item__top']}>
+          <IconButton
+            type={IconButtonType.iconClose}
+            small
+            secondary
+            hideBorders
+            hideBackground
+            onClick={() => {
               onRemoveFromCart();
-            }
+              dispatch(toggle(itemId));
+            }}
+            ariaLabel="Close"
+          />
 
-            dispatch(take(itemId));
-          }}
-        />
+          <Link to={link}>
+            <Image
+              src={image}
+              aria-label={name}
+              className={styles['cart-item__image']}
+            />
+          </Link>
 
-        <h3 className={styles['cart-item__price']}>${price}</h3>
-      </div>
-    </article>
-  );
-});
+          <Link to={link} className={styles['cart-item__title']}>
+            {name}
+          </Link>
+        </div>
+
+        <div className={styles['cart-item__bottom']}>
+          <Counter
+            count={count}
+            onAdd={() => {
+              dispatch(add(itemId));
+            }}
+            onTake={() => {
+              if (count === 1) {
+                onRemoveFromCart();
+              }
+
+              dispatch(take(itemId));
+            }}
+          />
+
+          <h3 className={styles['cart-item__price']}>${price}</h3>
+        </div>
+      </article>
+    );
+  }),
+);
