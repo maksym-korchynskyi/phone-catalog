@@ -82,8 +82,8 @@ export const CartPage = () => {
 
         {(showLoader || showContent) && (
           <CartList
-            itemsCount={length}
             products={cartProducts}
+            itemsCount={Object.keys(itemIds).length}
             className={styles['cart-page__cart-list']}
           />
         )}
